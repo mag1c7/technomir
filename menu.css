@@ -1,0 +1,87 @@
+body {
+    margin: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Панель вертикального меню */
+.vnav {
+    width: 200px;
+    box-shadow: 4px 4px 4px #9E9E9E;
+}
+
+/* Пункты основного меню */
+.vnav .pt {
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: 1px;
+    background: linear-gradient(to bottom, #F5F5F5, #DCDCDC);
+    border-radius: 4px;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.vnav .pt:hover,
+.vnav .item:hover > .pt {
+    background: linear-gradient(to bottom, #CCCCCC, #919191);
+}
+
+/* Пункт, у которого есть подменю */
+.vnav .item {
+    position: relative;
+}
+
+/* Выпадающее подменю справа от пункта */
+.vnav .drop {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 150px;
+    box-shadow: 4px 4px 4px #9E9E9E;
+}
+
+.vnav .item:hover > .drop {
+    display: block;
+}
+
+/* Пункты подменю */
+.vnav .drop_item {
+    display: block;
+    padding: 10px 10px;
+    margin-bottom: 1px;
+    background: linear-gradient(to bottom, #FAFAFA, #E8E8E8);
+    border-radius: 4px;
+    color: #000000;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.vnav .drop_item:hover,
+.vnav .item:hover > .drop_item {
+    background: linear-gradient(to bottom, #CCCCCC, #919191);
+}
+
+/* Задание 3: подменю раскрывается вниз и раздвигает меню */
+.accordion .drop {
+    position: static;
+    width: auto;
+    box-shadow: none;
+}
+
+.accordion .pt {
+    background: linear-gradient(to bottom, #DCDCDC, #B5B5B5);
+}
+
+.accordion .drop_item {
+    background: linear-gradient(to bottom, #F7F7F7, #EBEBEB);
+}
